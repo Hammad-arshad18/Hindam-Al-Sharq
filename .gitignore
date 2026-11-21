@@ -1,9 +1,10 @@
 # Photo working files (source JPEGs, old shots, prompts). Live photos live in assets/img/.
 photo-brief/
 
-# Enquiry spreadsheet (names and messages). Keep storage/.htaccess.
+# Customer enquiries and mail delivery notes. Keep storage/.htaccess.
 storage/*.csv.php
 storage/*.csv
+storage/*.log
 
 # macOS
 .DS_Store
@@ -26,11 +27,18 @@ composer.phar
 __pycache__/
 *.py[cod]
 
-# Secrets, if any are added later
+# Secrets and private business files. Kept on this machine only.
 .env
 .env.*
 !.env.example
 config.mail.php
-
-# Letterhead source file. Kept on this machine only.
+*.pem
+*.key
 letterhead/
+*.doc
+*.docx
+*.pdf
+*.xls
+*.xlsx
+*.ppt
+*.pptx
