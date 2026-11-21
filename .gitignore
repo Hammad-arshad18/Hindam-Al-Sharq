@@ -30,3 +30,7 @@ __pycache__/
 .env
 .env.*
 !.env.example
+config.mail.php
+
+# Letterhead source file. Kept on this machine only.
+letterhead/

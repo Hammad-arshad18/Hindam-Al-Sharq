@@ -184,6 +184,7 @@ return [
         'err_message' => 'Tell us what you need, in a sentence or more.',
         'err_token' => 'The form expired. Check your details and send it again.',
         'err_save'  => 'We could not save your enquiry. Try again in a moment.',
+        'err_send'  => 'We could not send your enquiry. Try again in a moment.',
     ],
 
     'footer' => [

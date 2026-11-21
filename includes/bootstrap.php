@@ -106,15 +106,23 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             $errors['form'] = $c['err_save'];
         }
 
-        if (!$errors && $config['email'] !== '') {
+        if (!$errors && is_array($config['mail'] ?? null) && ($config['mail']['host'] ?? '') !== '') {
+            require_once __DIR__ . '/smtp.php';
             $body = "Name: {$old['name']}\nCompany: {$old['company']}\nReach: {$old['reach']}\n"
                   . "Interest: {$old['interest']}\n\n{$old['message']}\n";
-            @mail(
-                $config['email'],
-                '=?UTF-8?B?' . base64_encode('Website enquiry — ' . $old['name']) . '?=',
-                $body,
-                "Content-Type: text/plain; charset=UTF-8\r\n"
-            );
+            $subject = 'Website enquiry — ' . str_replace(["\r", "\n"], ' ', $old['name']);
+            $replyTo = filter_var($old['reach'], FILTER_VALIDATE_EMAIL) ? $old['reach'] : '';
+            $to = (string) ($config['mail']['to'] ?? $config['email']);
+            $reason = smtp_send($config['mail'], $to, $subject, $body, $replyTo);
+            if ($reason !== null) {
+                $errors['form'] = $c['err_send'];
+                $log = dirname($file) . '/mail.log';
+                @file_put_contents(
+                    $log,
+                    date('c') . ' ' . $reason . "\n",
+                    FILE_APPEND | LOCK_EX
+                );
+            }
         }
     }
 
