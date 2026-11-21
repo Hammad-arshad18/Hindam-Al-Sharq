@@ -193,9 +193,10 @@ $img  = static fn(string $slot): string => 'assets/img/l-' . $key . '-' . $slot 
   <div class="foot__row">
     <a class="logo" href="./" aria-label="<?= e($t['name']) ?>"><?= $mark ?><span><?= e($t['name']) ?></span></a>
     <p><?= e($t['legal_name']) ?></p>
-    <p><?= e($ui['city']) ?> <time data-clock dir="ltr">--:--</time></p>
+    <p><?= e($ui['city']) ?></p>
     <p>© <?= date('Y') ?> <?= e($t['footer']['rights']) ?></p>
     <a class="foot__top" href="#top"><?= e($t['footer']['top']) ?></a>
+    <p class="foot__note"><?= e($t['footer']['images']) ?></p>
   </div>
 </footer>
 

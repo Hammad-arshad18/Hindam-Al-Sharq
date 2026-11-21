@@ -74,7 +74,7 @@ $mark = '<img class="mark" src="assets/img/logo-mark-360.webp" width="360" heigh
     <div class="hero__meta" data-fade>
       <span><?= e($ui['tag']) ?></span>
       <span dir="ltr">32°07′ N &nbsp; 20°04′ E</span>
-      <span><?= e($ui['city']) ?> <time data-clock dir="ltr">--:--</time></span>
+      <span><?= e($ui['city']) ?></span>
     </div>
 
     <h1 class="hero__title" data-in><?= words($t['hero']['title']) ?></h1>
@@ -345,9 +345,10 @@ $mark = '<img class="mark" src="assets/img/logo-mark-360.webp" width="360" heigh
   <div class="foot__row">
     <a class="logo" href="#top" aria-label="<?= e($t['name']) ?>"><?= $mark ?><span><?= e($t['name']) ?></span></a>
     <p><?= e($t['legal_name']) ?></p>
-    <p><?= e($ui['city']) ?> <time data-clock dir="ltr">--:--</time></p>
+    <p><?= e($ui['city']) ?></p>
     <p>© <?= date('Y') ?> <?= e($t['footer']['rights']) ?></p>
     <a class="foot__top" href="#top"><?= e($t['footer']['top']) ?></a>
+    <p class="foot__note"><?= e($t['footer']['images']) ?></p>
   </div>
 </footer>
 

@@ -9,7 +9,7 @@ return [
     'skip' => 'Skip to content',
 
     'ui' => [
-        'tag' => 'Garment manufacturing', 'city' => 'Benghazi',
+        'tag' => 'Garment Manufacturing', 'city' => 'Benghazi',
         'about' => 'The name', 'mill' => 'The factory', 'record' => 'The company',
         'dye' => 'From yarn to dyed and printed fabric', 'make' => 'How a garment is made', 'loom' => 'The cloth behind it', 'range' => 'What we make', 'process' => 'How we work', 'contact' => 'Enquiries',
         'wordmark' => 'Hindam Al-Sharq',
@@ -44,7 +44,7 @@ return [
         'label_title' => 'The company',
         'facts' => [
             'Legal name'          => 'Hindam Al-Sharq Textile Industries LLC',
-            'Activity'            => 'Garment manufacturing and textiles',
+            'Activity'            => 'Garment Manufacturing and textiles',
             'Made in'             => 'Al-Hawari, Benghazi, Libya',
         ],
     ],
@@ -187,8 +187,9 @@ return [
     ],
 
     'footer' => [
-        'line'   => 'Garment manufacturing, Benghazi.',
+        'line'   => 'Garment Manufacturing, Benghazi.',
         'rights' => 'All rights reserved.',
         'top'    => 'Back to top',
+        'images' => 'Images used on this website are AI-generated, not original photographs.',
     ],
 ];

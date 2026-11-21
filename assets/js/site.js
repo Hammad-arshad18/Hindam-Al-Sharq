@@ -441,15 +441,6 @@
     document.fonts.addEventListener('loadingdone', () => { measure(); update(true); });
   }
 
-  /* ---------- Benghazi time ---------- */
-  const clocks = $$('[data-clock]');
-  if (clocks.length) {
-    const fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Africa/Tripoli', hour: '2-digit', minute: '2-digit' });
-    const setClock = () => { const t = fmt.format(new Date()); clocks.forEach((el) => { el.textContent = t; }); };
-    setClock();
-    setInterval(setClock, 20000);
-  }
-
   /* ---------- Menu (small screens) ---------- */
   const menuBtn = $('.bar__menu');
   if (menuBtn && nav) {
