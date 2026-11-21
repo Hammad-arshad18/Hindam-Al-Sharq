@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hindam-php",
+      "runtimeExecutable": "php",
+      "runtimeArgs": ["-S", "localhost:8137", "-t", "."],
+      "port": 8137
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+# Photo working files (source JPEGs, old shots, prompts). Live photos live in assets/img/.
+photo-brief/
+
+# Enquiry spreadsheet (names and messages). Keep storage/.htaccess.
+storage/*.csv.php
+storage/*.csv
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editors and Office lock files
+.idea/
+.vscode/
+*.swp
+*~
+~$*
+Thumbs.db
+
+# PHP / Python leftovers
+vendor/
+composer.phar
+*.log
+__pycache__/
+*.py[cod]
+
+# Secrets, if any are added later
+.env
+.env.*
+!.env.example

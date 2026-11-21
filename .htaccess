@@ -1,0 +1,18 @@
+# Cache images for 7 days. PHP pages stay uncached so copy and form changes show up at once.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 7 days"
+  ExpiresByType image/jpeg "access plus 7 days"
+  ExpiresByType image/png "access plus 7 days"
+  ExpiresByType image/gif "access plus 7 days"
+  ExpiresByType image/svg+xml "access plus 7 days"
+  ExpiresByType image/avif "access plus 7 days"
+  ExpiresByType image/x-icon "access plus 7 days"
+  ExpiresByType image/vnd.microsoft.icon "access plus 7 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|jpe?g|png|gif|svg|avif|ico)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
